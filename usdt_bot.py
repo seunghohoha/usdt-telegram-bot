@@ -14,11 +14,14 @@ def get_usdt_price():
 async def send_message():
     price = get_usdt_price()
 
-    text = f"""📈 빗썸 USDT 시세
+    text = f"""
+안녕하세요 럭키수기입니다.
 
-💰 현재가: {price}원
+금일 테더 정산 시세입니다.
 
-#USDT #테더 #빗썸"""
+빗썸 USDT 시세
+현재가: {price}원
+"""
 
     bot = Bot(token=TOKEN)
     await bot.send_message(chat_id=CHANNEL, text=text)
